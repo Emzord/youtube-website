@@ -420,6 +420,18 @@
     display: none;
   }
 
+  .sidebar.sidebar-open {
+  display: block;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  background-color: white;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
   .video-grid {
     grid-template-columns: 1fr;
   }

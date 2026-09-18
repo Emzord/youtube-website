@@ -8,12 +8,12 @@ import {
 
 import { FaYoutube } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({ onMenuClick }) {
   return (
     <nav className="navbar">
 
      <div className="navbar-left">
-  <FiMenu />
+ <FiMenu onClick={onMenuClick} className="menu-icon" />
 
   <div className="youtube-logo">
     <FaYoutube className="youtube-icon" />

@@ -9,7 +9,7 @@ import {
   FiVideo
 } from "react-icons/fi";
 
-function Sidebar() {
+function Sidebar({ sidebarOpen }) {
 
   const menuItems = [
     { name: "Home", icon: <FiHome /> },
@@ -39,7 +39,7 @@ function Sidebar() {
   
 
   return (
-    <aside className="sidebar">
+   <aside className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
 
       <div className="sidebar-section">
         {menuItems.map((item) => (
