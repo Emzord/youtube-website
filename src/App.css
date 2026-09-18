@@ -423,10 +423,10 @@
   .sidebar.sidebar-open {
   display: block;
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 0;
   width: 220px;
-  height: calc(100vh - 60px);
+  height: 100vh;
   background-color: white;
   z-index: 1000;
   overflow-y: auto;
