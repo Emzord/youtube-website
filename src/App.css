@@ -1,0 +1,452 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  height: 60px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+  background-color: white;
+}
+
+
+/* LEFT SIDE */
+
+.youtube-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.youtube-icon {
+  color: #ff0000;
+  font-size: 27px;
+}
+
+.premium-logo {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.premium-logo small {
+  position: absolute;
+  top: -7px;
+  right: -18px;
+
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 22px;
+}
+
+.navbar-left h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* CENTER */
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 50%;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 16px;
+
+  border: 1px solid #cccccc;
+  border-radius: 20px 0 0 20px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar button {
+  width: 65px;
+  height: 40px;
+
+  border: 1px solid #cccccc;
+  border-left: none;
+
+  border-radius: 0 20px 20px 0;
+
+  background-color: #f8f8f8;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mic-button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #f2f2f2;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* RIGHT SIDE */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 21px;
+}
+
+.create-button {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: #f2f2f2;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #00796b;
+  color: white;
+
+  font-size: 15px;
+}
+
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+  width: 210px;
+  height: calc(100vh - 60px);
+
+  padding: 12px;
+
+  background-color: white;
+
+  overflow-y: auto;
+}
+
+.sidebar-item.active {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.sidebar-section {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-item {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 0 12px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: #f2f2f2;
+}
+
+.sidebar-item svg {
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.sidebar-section h3 {
+  padding: 10px 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   PAGE LAYOUT
+================================ */
+
+.page-layout {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 0 16px;
+}
+
+
+/* ================================
+   CATEGORIES
+================================ */
+
+.categories {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  overflow-x: auto;
+
+  white-space: nowrap;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category-button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px 13px;
+
+  background-color: #f2f2f2;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.category-button:hover {
+  background-color: #e5e5e5;
+}
+
+.category-button.active-category {
+  background-color: #0f0f0f;
+  color: white;
+}
+
+
+
+
+/* ================================
+   VIDEO GRID
+================================ */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 16px;
+
+  padding-top: 16px;
+}
+
+
+/* ================================
+   VIDEO CARD
+================================ */
+
+.video-card {
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  display: block;
+}
+
+
+/* VIDEO INFORMATION */
+
+.video-info {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.channel-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background-color: #222;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.video-details {
+  flex: 1;
+}
+
+.video-details h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+
+  margin-bottom: 4px;
+}
+
+.video-details p {
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #606060;
+}
+
+.video-menu {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.subscription-avatar {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background-color: #333;
+  color: white;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar {
+    width: 170px;
+  }
+
+  .navbar-center {
+    width: 45%;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-center {
+    flex: 1;
+    margin-left: 15px;
+  }
+
+  .create-button {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .premium-logo span,
+  .premium-logo small {
+    display: none;
+  }
+}
